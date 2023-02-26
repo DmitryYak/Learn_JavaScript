@@ -108,24 +108,25 @@
 // }
 // console.log(sum);
 
-let menu = {
-  width: 200,
-  height: 300,
-  title: "My menu",
-};
-console.log(menu);
+// let menu = {
+//   width: 200,
+//   height: 300,
+//   title: "My menu",
+// };
+// console.log(menu);
 
-function multiplyNumeric(i) {
-  for (let key in i) {
-    if (typeof i[key] == "number") {
-      i[key] *= 2;
-    }
-    // console.log(i);
-  }
-}
+// function multiplyNumeric(i) {
+//   for (let key in i) {
+//     if (typeof i[key] == "number") {
+//       i[key] *= 2;
+//     }
+//     // console.log(i);
+//   }
+// }
 
-multiplyNumeric(menu);
-console.log(menu);
+// multiplyNumeric(menu);
+// console.log(menu);
+
 //от 3 до 5 бесплатно
 //  цена для ребенка (от 5 до 14)..70 р.
 // цена для взрослого(от 14)..120 р
