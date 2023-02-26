@@ -127,6 +127,46 @@
 // multiplyNumeric(menu);
 // console.log(menu);
 
+let myObject = {
+  one: true,
+  two: 12,
+  three: "leader",
+};
+let copyMyObject = {};
+
+for (let key in myObject) {
+  copyMyObject[key] = myObject[key];
+}
+console.log(myObject, copyMyObject);
+
+let obj_2 = {
+  build: 1,
+  river: false,
+  name: "Igor",
+  mass: "",
+};
+let copyObj = {};
+for (let key in obj_2) {
+  copyObj[key] = obj_2[key];
+}
+console.log(copyObj);
+copyObj.build = "new value";
+console.log(copyObj);
+
+let joinAllObjects = {};
+Object.assign(joinAllObjects, myObject, obj_2, copyObj);
+
+console.log(joinAllObjects);
+
+Object.assign(joinAllObjects, { river: true });
+console.log(joinAllObjects);
+
+let copyBigObject = Object.assign({}, joinAllObjects);
+console.log(copyBigObject);
+
+let copyOneMore = { ...copyBigObject };
+console.log(copyOneMore);
+
 //от 3 до 5 бесплатно
 //  цена для ребенка (от 5 до 14)..70 р.
 // цена для взрослого(от 14)..120 р
