@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <script src="alert.js"></script> -->
+    <script>
+      //   let myName = prompt("what is your name?");
+      //   alert(myName);
+
+      //   let age = prompt("how old is Dmitry", "");
+      //   if (age == 37) {
+      //     alert("great, you are right!");
+      //     alert("congratulate!");
+      //   }
+
+      //   let myName = prompt("how old is Dmitry?", "");
+      //   if (myName == 37) {
+      //     alert("great!!!");
+      //   } else {
+      //     alert("it's a mistake");
+      //   }
+
+      //   let birthay = prompt("when is your birthay", "");
+      //   if (birthay > 14) {
+      //     alert("it's too late");
+      //   } else if (birthay < 14) {
+      //     alert("it's too early");
+      //   } else if (birthay == 14) {
+      //     alert("great!!!");
+      //   } else {
+      //     alert("mistake");
+      //   }
+
+      //   let ageTwo = prompt("how old are you?", 18);
+      //   let message =
+      //     ageTwo < 3
+      //       ? "good morning baby)"
+      //       : ageTwo < 18
+      //       ? "hello"
+      //       : ageTwo < 100
+      //       ? "crazy"
+      //       : "too much";
+      //   alert(message);
+
+      //   let nameJs = prompt("Which oficial name of JavaScript", "");
+      //   if (nameJs == "ECMAScript") {
+      //     alert("right!");
+      //   } else alert("didn't you?");
+
+      //   let value = prompt("what value?", "");
+      //   if (value > 0) {
+      //     alert(1);
+      //   } else if (value < 0) {
+      //     alert(-1);
+      //   } else {
+      // //     alert(0);
+      // //   }
+
+      // //   let result = a + b < 4 ? "little" : "a lot";
+      // //   alert(result);
+
+      // // let login = prompt("");
+      // // login == "Сотрудник" ? alert("Hello!") : alert("");
+      // // login == "Директор" ? alert("Good morning!") : alert("");
+
+      // let login = prompt("");
+
+      // if (login == "Admin") {
+      //   var password = prompt("", "add your password");
+      //   if (password == "" || password == null) {
+      //     alert("Cancel");
+      //   } else if (password == "i main") {
+      //     alert("hello");
+      //   } else {
+      //     alert("wrong password");
+      //   }
+      // } else if (login == "" || login == null) {
+      //   alert("Canceled");
+      // } else {
+      //   alert("I don't know you");
+      // }
+
+      // for (let i = 0; i < 5; i++) {
+      //   alert(i);
+      // }
+
+      // for (let i = 0; i < 10; i++) {
+      //   if (i % 2 == 0) {
+      //     continue;
+      //   }
+      //   alert(i);
+      // }
+
+      // alert(login);
+
+      // for (let i = 2; i <= 10; i++) {
+      //   if (i % 2 == 0) alert(i);
+      // }
+
+      // let i = 0;
+      // while (i < 3) {
+      //   alert(`number ${i}!`);
+      //   i++;
+      // }
+
+      // let i;
+      // do i = prompt("add nulmber more than 100", "");
+      // while (i < 100);
+
+      // let dateNow = new Date();
+      // let dateMeeting = new Date(prompt("add date"));
+      // // function dateCatsBirth() {
+      //   dateMeeting.setFullYear(2022 [, 12, 17])
+      //   return alert(dateMeeting)
+
+      // }
+      // // dateMeeting.setDate(dateMeeting.getDate() + 65);
+      // alert(dateMeeting);
+      // dateMeeting.setDate(dateMeeting.getDate() + 65);
+      // alert(dateMeeting);
+
+      // dateCatsBirth()
+      // let n = prompt("add number", "");
+      // for (let i = 2; i <= n; i++) {
+      //   if (i % 2 == 0) {
+      //     continue;
+      //   }
+
+      //   alert(i);
+      // }
+
+      // let fitAge = +prompt("", "add age");
+      // switch (fitAge) {
+      //   case 18:
+      //     alert("good");
+      //     break;
+      //   default:
+      //     alert("i don't know");
+      // }
+
+      // let browser = prompt("what is your browser", "");
+      // if (browser == "edge") {
+      //   alert("you've got the Edge!");
+      // } else if (
+      //   browser == "chrome" ||
+      //   browser == "firefox" ||
+      //   browser == "safari" ||
+      //   browser == "opera"
+      // ) {
+      //   alert("Okay we support these browsers");
+      // } else {
+      //   alert("this page not ok");
+      // }
+
+      // const number = +prompt("add number");
+      // switch (number) {
+      //   case 0:
+      //     alert("you added number 8");
+      //     break;
+      //   case 1:
+      //     alert("you added number 1");
+      //     break;
+      //   case 2:
+      //   case 3:
+      //     alert("you added number 2 or 3");
+      //     break;
+      // }
+
+      // functions
+
+      // function checkAge(age) {
+      //   return age > 18 ? true : confirm("are you shure?");
+      // }
+
+      // function checkAge(age) {
+      //   return age > 18 || confirm("are you shure?");
+      // }
+
+      // function min(a, b) {
+      //   if (a < b) {
+      //     return a;
+      //   } else {
+      //     return b;
+      //   }
+      // }
+      // min(5, 4);
+
+      // function min(a, b) {
+      //   return a < b ? a : b;
+      // }
+
+      // function pow(x, n) {
+      //   for (let i; i > n; i * x) {}
+      //   return i;
+      // }
+      // pow(3, 3);
+
+      // function pow(x, n) {
+      //   let result = x;
+
+      //   for (let i = 1; i <script n; i++) {
+      //     result = result * x;
+      //   }
+
+      //   return result;
+      // }
+
+      // let x = prompt("", "");
+      // let n = prompt("", "");
+      // // alert(pow(x, n));
+      // let isBoss = confirm("yes");
+      // alert(isBoss);
+
+      // function ask(question, yes, no) {
+      //   if (confirm(question)) yes();
+      //   else no();
+      // }
+
+      // // function showYes() {
+      // //   alert("you are agree");
+      // // }
+
+      // // function showNo() {
+      // //   alert("you don't agrese");
+      // // }
+
+      // // ask("do you agree?", showYes, showNo);
+
+      // ask(
+      //   "are you agree?",
+      //   function () {
+      //     alert("you agree");
+      //   },
+      //   function () {
+      // //     alert("you don't agree");
+      // //   }
+      // // );
+
+      // let age = prompt("how old are you?", "18");
+      // let answer;
+      // if (age < 18) {
+      //   answer = function () {
+      //     alert("hello");
+      //   };
+      // } else if (age > 18) {
+      //   answer = function () {
+      //     alert("good");
+      //   };
+      // }
+      // answer();
+      // alert(typeof answer);
+
+      // let age = prompt("how old are you?");
+      // let answer =
+      //   age < 18
+      //     ? function () {
+      //         alert("hello");
+      //       }
+      //     : function () {
+      //         alert("not hello");
+      //       };
+
+      // answer();
+
+      // let age = prompt("how old are you?");
+      // let welcome = age >= 18 ? () => alert("hello") : () => alert("buy");
+      // welcome();
+      // let ask = (question, yes, no) => {
+      //   if (confirm(question)) yes();
+      //   else no();
+      // };
+      // ask(
+      //   "do you agree?",
+      //   () => alert("you agree"),
+      //   () => alert("you dont agree")
+      // );
+      let menu = {
+        width: 200,
+        height: 300,
+        title: "My menu",
+      };
+
+      function multiplyNumeric(i) {
+        for (let key in i) {
+          if (typeof i[key] == "number") {
+            i[key] *= 2;
+          }
+          alert(i);
+        }
+      }
+
+      multiplyNumeric(menu);
+    </script>
+  </body>
+</html>
