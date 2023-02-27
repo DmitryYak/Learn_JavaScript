@@ -178,3 +178,4 @@ let obj_3 = {
 
 let i = structuredClone(obj_3);
 console.log(i);
+
