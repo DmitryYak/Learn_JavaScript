@@ -176,6 +176,7 @@ make_bid_first_simbol = function (i) {
   new_name = new_first_simbol + i.slice(1);
   alert(new_name);
 };
+// make_bid_first_simbol(prompt("add name", ""));
 
 checkSpam = function (i) {
   start_index_vi = i.toUpperCase().indexOf("VIAGRA");
@@ -184,4 +185,6 @@ checkSpam = function (i) {
     alert("true");
   } else alert("false");
 };
-checkSpam(prompt("add word", ""));
+// checkSpam(prompt("add word", ""));
+
+truncate = function (str, maxlength) {};
