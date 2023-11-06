@@ -187,4 +187,6 @@ checkSpam = function (i) {
 };
 // checkSpam(prompt("add word", ""));
 
-truncate = function (str, maxlength) {};
+truncate = function (str, maxlength) {
+  // let
+};
