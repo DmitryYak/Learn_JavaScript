@@ -188,5 +188,17 @@ checkSpam = function (i) {
 // checkSpam(prompt("add word", ""));
 
 truncate = function (str, maxlength) {
-  // let
+  str = prompt("your str", "");
+  maxlength = +prompt("num", "");
+  countStr = str.length;
+  final = str.slice(0, maxlength);
+  alert(final);
 };
+// truncate();
+
+extractCurrencyValue = function (str) {
+  str = prompt("");
+  result = str.split("$").join("");
+  alert(result);
+};
+// extractCurrencyValue();
