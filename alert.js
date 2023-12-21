@@ -169,36 +169,93 @@
 // }
 // console.log(str);
 
-// let name = prompt("add name", "");
-
-make_bid_first_simbol = function (i) {
-  new_first_simbol = i[0].toUpperCase();
-  new_name = new_first_simbol + i.slice(1);
-  alert(new_name);
+let sumInput = function (i) {
+  let arr = [];
+  while (true) {
+    let value = prompt("add number", 0);
+    if (value === "" || value === null || !isFinite(value)) break;
+    arr.push(+value);
+  }
+  let result = 0;
+  for (let number_2 of arr) {
+    result += number_2;
+  }
+  return result;
 };
-// make_bid_first_simbol(prompt("add name", ""));
+// alert(sumInput());
 
-checkSpam = function (i) {
-  start_index_vi = i.toUpperCase().indexOf("VIAGRA");
-  start_index_x = i.toUpperCase().indexOf("XXX");
-  if (start_index_vi != -1 || start_index_x != -1) {
-    alert("true");
-  } else alert("false");
-};
-// checkSpam(prompt("add word", ""));
+let obj = { name: "Bobik", ar: [3, 6, "123", true] };
 
-truncate = function (str, maxlength) {
-  str = prompt("your str", "");
-  maxlength = +prompt("num", "");
-  countStr = str.length;
-  final = str.slice(0, maxlength);
-  alert(final);
-};
-// truncate();
+let array = [1, "sdf", 23, true];
+array.splice(1, 1, "new value");
+// console.log(array);
 
-extractCurrencyValue = function (str) {
-  str = prompt("");
-  result = str.split("$").join("");
-  alert(result);
+let newArr = array.splice(0, 3);
+// console.log(newArr);
+newAr_2 = newArr.concat(["newConcatStr", true], [8]);
+// console.log(newArr.concat([56, true]));
+// console.log(newAr_2);
+
+let arr_2 = [5, 2, 0, 1, 13, -6, 234, true];
+// console.log(arr_2.sort((a, b) => a - b));
+
+let list_guests = "Petya, Ivan, Kolya, Jonh";
+arr_list = list_guests.split(", ");
+for (let i of arr_list) {
+  // console.log(`list has ${i} here`);
+}
+// arr_list.forEach((i) => console.log(`name ${i} goes to the paty`));
+
+// console.log(new_ar);
+// console.log(arr_2);
+
+let camelize = function (str) {
+  let newStr = str.split("-");
+  // console.log(newStr);
+
+  let newBig = newStr.map(function (i, index) {
+    if (index != 0) {
+      return newStr[0] + i.charAt(0, 1).toUpperCase() + i.slice(1);
+    }
+  });
+
+  let togetherWords = newBig.join("");
+  // console.log(newBig);
+  console.log(togetherWords);
 };
-// extractCurrencyValue();
+// camelize("my-short-string");
+// camelize("list-style-image");
+// camelize("-webkit-transition");
+
+let array_1 = [5, 3, 8, 1];
+
+let filterRange = function (arr, a, b) {
+  let resultArr = [];
+  let newArr = arr.map((i) => {
+    if (i >= a && i <= b) {
+      return resultArr.push(i);
+    }
+  });
+  console.log(resultArr);
+};
+// filterRange(array_1, 1, 7);
+
+let filterRangeNew = function (arr, a, b) {
+  return arr.filter((item) => item >= a && item <= b);
+};
+
+// let cons_1 = filterRangeNew(array_1, 1, 78);
+// console.log(cons_1);
+
+let filterRangeInPlace = function (arr, a, b) {
+  for (let i = 0; i < arr.length; i++) {
+    let val = arr[i];
+    if (val < a || val > b) {
+      arr.splice(i, 1);
+      i--;
+    }
+  }
+};
+
+filterRangeInPlace(array_1, 2, 5);
+console.log(array_1);
