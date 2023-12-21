@@ -258,4 +258,4 @@ let filterRangeInPlace = function (arr, a, b) {
 };
 
 filterRangeInPlace(array_1, 2, 5);
-console.log(array_1)
+console.log(array_1);
