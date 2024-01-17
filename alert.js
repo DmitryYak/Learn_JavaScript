@@ -257,5 +257,293 @@ let filterRangeInPlace = function (arr, a, b) {
   }
 };
 
-filterRangeInPlace(array_1, 2, 5);
-console.log(array_1);
+// filterRangeInPlace(array_1, 2, 5);
+// console.log(array_1);
+
+let arr_3 = [5, 2, 1, -10, 8];
+
+arr_3.sort().reverse();
+// console.log(arr_3);
+
+let arr_4 = ["HTML", "JavaScript", "CSS"];
+
+let copySorted = function (arr) {
+  let new_arr = [...arr];
+  new_arr.sort();
+  console.log(new_arr);
+};
+// copySorted(arr_4);
+// console.log(arr_4);
+
+function Calculator() {
+  this.methods = {
+    "-": (a, b) => a - b,
+    "+": (a, b) => a + b,
+  };
+  this.calculate = function (str) {
+    let split = str.split(" "),
+      a = +split[0],
+      op = split[1],
+      b = +split[2];
+
+    if (!this.methods[op] || isNaN(a) || isNaN(b)) {
+      return NaN;
+    }
+    return this.methods[op](a, b);
+  };
+
+  this.addMethod = function (name, func) {
+    this.methods[name] = func;
+  };
+}
+
+let calc = new Calculator();
+
+// let vasya = { name: "Вася", age: 25 };
+// let petya = { name: "Петя", age: 30 };
+// let masha = { name: "Маша", age: 28 };
+
+// let users = [vasya, petya, masha];
+
+// let names = users.map((i) => i.name);
+
+// console.log(names);
+
+// let vasya = { name: "Вася", surname: "Пупкин", id: 1 };
+// let petya = { name: "Петя", surname: "Иванов", id: 2 };
+// let masha = { name: "Маша", surname: "Петрова", id: 3 };
+
+// let users = [vasya, petya, masha];
+
+// let usersMapped = users.map((i) => `${i.name} ${i.surname} id: ${i.id}`);
+// let userMapped_2 = users.map((i) => ({
+//   fullName: `${i.name} ${i.surname}`,
+//   id: `${i.id}`,
+// }));
+
+// console.log(usersMapped);
+// console.log(userMapped_2);
+
+// let vasya = { name: "Вася", age: 25 };
+// let petya = { name: "Петя", age: 30 };
+// let masha = { name: "Маша", age: 28 };
+
+// let arr = [vasya, petya, masha];
+let sortByAge = function (arr) {
+  console.log(arr.sort((a, b) => (a.age > b.age ? 1 : -1)));
+};
+
+// sortByAge(arr) ;
+
+// let arr = [1, 2, 3];
+// let shuffle = function (arr) {
+//   console.log(Math.floor(Math.random(arr) * 10));
+// };
+// shuffle(arr);
+
+let vasya = { name: "Вася", age: 25 };
+let petya = { name: "Петя", age: 30 };
+let masha = { name: "Маша", age: 29 };
+
+// let arr = [vasya, petya, masha];
+
+function getAverageAge(users) {
+  let count = 0;
+  for (let i = 0; i < users.length; i++) {
+    count += users[i].age;
+  }
+  console.log(count / users.length);
+}
+// getAverageAge(arr);
+
+function unique(arr) {
+  console.log(arr.filter((val, index, array) => array.indexOf(val) === index));
+}
+
+let strings = [
+  "кришна",
+  "кришна",
+  "харе",
+  "харе",
+  "харе",
+  "харе",
+  "кришна",
+  "кришна",
+  ":-O",
+];
+
+// unique(strings);
+function unique_2(str) {
+  let newArr = [];
+  for (el of str) {
+    if (!newArr.includes(el)) {
+      newArr.push(el);
+    }
+  }
+  console.log(newArr);
+}
+// unique_2(strings);
+
+let users = [
+  { id: "john", name: "John Smith", age: 20 },
+  { id: "ann", name: "Ann Smith", age: 24 },
+  { id: "pete", name: "Pete Peterson", age: 31 },
+];
+
+function groupById(arr) {
+  return arr.reduce((acc, val) => {
+    acc[val.id] = val;
+    return acc;
+  }, {});
+}
+const show_function_group = groupById(users);
+// console.log(show_function_group);
+let range = {
+  from: 1,
+  to: 5,
+};
+// for (let num of range) {
+//   // console.log(num);
+// }
+
+let strings_2 = "this is the string";
+for (let str of strings_2) {
+  // console.log(str);//////////////////////   the same!!!
+}
+
+let iterator = strings_2[Symbol.iterator]();
+while (true) {
+  let result = iterator.next();
+  if (result.done) break;
+  // console.log(result.value);///////////     the same!!!
+}
+
+let arr_5 = Array.from(range);
+// console.log(arr_5);
+
+let mapObject = new Map([
+  ["name", "Patrik"],
+  ["age", 34],
+  ["isActive", true],
+]);
+// console.log(myObject);
+
+for (let keys of mapObject.values()) {
+  // console.log(keys);
+}
+
+mapObject.forEach((val, key, map) => {
+  // console.log(`${key}: ${val} `);
+});
+
+newObject = {
+  name: "Ivan",
+  age: 54,
+  isActive: true,
+};
+
+let mapNewObject = new Map(Object.entries(newObject));
+// console.log(mapNewObject);
+
+let classicObjFromMap = Object.fromEntries(mapObject);
+// console.log(classicObjFromMap);
+
+let map_2 = new Map();
+map_2.set("banana", 1);
+map_2.set("orange", 2);
+map_2.set("meat", 4);
+// console.log(map_2.size);
+
+let obj_classic = Object.fromEntries(map_2);
+// console.log(obj_classic);
+
+let mySet = new Set();
+let ivan = { name: "Ivan" };
+let pete = { name: "Pete" };
+let mary = { name: "Mary" };
+let ageMary = { age: 34 };
+
+let newArr_2 = [ivan, pete, mary, ageMary];
+
+mySet.add(ivan);
+mySet.add(ageMary);
+mySet.add(pete);
+mySet.add(ivan);
+// console.log(mySet, mySet.size);
+
+mySet.forEach((i, iAgain, mySet) => {
+  // console.log(i);
+});
+
+let mySetArr = new Set(newArr);
+// console.log(mySetArr);
+
+let values = [
+  "Hare",
+  "Krishna",
+  "Hare",
+  "Krishna",
+  "Krishna",
+  "Krishna",
+  "Hare",
+  "Hare",
+  ":-O",
+];
+function unique(arr) {
+  let mySet_2 = new Set(arr);
+  console.log(Array.from(mySet_2));
+}
+// unique(values);
+
+let arr_mono = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+
+function aclean(arr) {
+  let new_arr_first = arr.map((i) => i.split("").sort().join("").toLowerCase());
+  let new_arr = new Set(new_arr_first);
+  // let sort_set = new_arr.console.log(new_arr);
+  // console.log(Array.from(new_arr));
+}
+aclean(arr_mono);
+
+let messages = [
+  { text: "Hello", from: "John" },
+  { text: "How goes?", from: "John" },
+  { text: "See you soon", from: "Alice" },
+];
+
+let readMessaages = new WeakSet();
+readMessaages.add(messages[0]);
+readMessaages.add(messages[1]);
+readMessaages.add(messages[0]);
+
+// console.log(readMessaages.has(messages[0]));
+
+// console.log(Object.entries(messages[1]));
+
+let runFun = function() {for (let val of Object.values(messages[0])) {
+  console.log(val);
+  }
+}
+// runFun()
+let newObjectMessages = Object.entries(messages); ///  из объектов в массив
+// console.log(newObjectMessages);
+let returnArrToObject = Object.fromEntries(newObjectMessages);
+// console.log(returnArrToObject);
+
+let salaries = {
+  "John": 100,
+  "Pete": 300,
+  "Mary": 250
+};
+
+let sumSalaries = function(salaries) {
+  let saralyArr = Object.entries(salaries)
+  let sum = 0
+  for (let i of saralyArr) {
+    sum += Object.values(i)[1]
+  }
+  console.log(sum)
+}
+// sumSalaries(salaries)
+
+
