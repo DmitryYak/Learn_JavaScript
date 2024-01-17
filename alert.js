@@ -546,4 +546,13 @@ let sumSalaries = function(salaries) {
 }
 // sumSalaries(salaries)
 
+let user = {
+  name: 'John',
+  age: 30
+};
 
+let count = function(obj) {
+console.log(Object.keys(obj).length)
+}
+
+count(user)
