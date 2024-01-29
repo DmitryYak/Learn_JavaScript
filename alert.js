@@ -556,3 +556,68 @@ console.log(Object.keys(obj).length)
 }
 
 count(user)
+
+let myArr = ['Vladislav', 'Ivan'];
+let [firstname, surname] = myArr
+// console.log(firstname)
+
+let user_3 = {};
+[user_3.name, , user_3.s_name] = 'Ivanov Ivan Ivanovich'.split(' ');
+// console.log(user_3.name);
+
+let user_2 = {
+  name: "Ivan",
+  age: 30
+};
+for (let [key, value] of Object.entries(user)) {
+  // console.log(`${key}: ${value}`)
+}
+// console.log(user_2)
+
+let user_4 = {
+  name: "John",
+  years: 30,
+  // isAdmin: true
+};
+
+let {name, years: age, isAdmin = false } = user_4;
+
+// console.log(`${name}, ${age}, ${isAdmin}`);
+
+let randomNum = Math.floor(Math.random()* (2021 - 1800 + 1)) + 1800
+// console.log(randomNum)
+
+let salaries_2 = {
+  "John": 100,
+  "Pete": 300,
+  "Mary": 250
+};
+
+let topSalary = function(salaries) {
+  let arr_2 = []
+  let name = null
+for (let [key,values] of Object.entries(salaries_2))
+  if(values > arr_2){
+    arr_2 = values
+    name = key
+  }
+  console.log(name)
+}
+
+// topSalary(salaries_2)
+let count_2 = 0
+let start = new Date();
+for (let i = 0; i < 100000; i++) {
+  count_2 += 1
+}
+let end = new Date();
+// console.log(`this for during ${end - start} milsec ${count_2}`)
+
+
+
+let dateTask = new Date(2012,1,20,3,12)
+console.log(dateTask)
+
+let randomNumOrder = (Math.random() * (1 - 0.001) + 0.001).toFixed(3);
+console.log(randomNumOrder)
+
