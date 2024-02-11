@@ -616,8 +616,56 @@ let end = new Date();
 
 
 let dateTask = new Date(2012,1,20,3,12)
-console.log(dateTask)
+// console.log(dateTask)
 
 let randomNumOrder = (Math.random() * (1 - 0.001) + 0.001).toFixed(3);
-console.log(randomNumOrder)
+// console.log(randomNumOrder)
 
+
+let date_2 = new Date()
+
+let getWeekDay_2 = function(i) {
+  let arrDays = ["ВС", "ПН", "ВТ", "СР", "ЧТ", "ПТ", "СБ"]
+  let dayToday = i.getDate() - 1
+  if (i.getDate() == 0) {
+    
+  }
+  console.log(dayToday)
+console.log(arrDays[dayToday])
+}
+// getWeekDay_2(date_2)
+
+let oneDate = new Date(2024, 1, 7)
+
+getDateAgo = function(date, days) {
+  let timstamt = date.getTime()
+  let dif_1 = new Date(2024,3,4)
+  let dif_2 = new Date(2024,3,3)
+  let daysStamt = (dif_1.getTime() - dif_2.getTime()) * days
+  timestamt_result = (timstamt - daysStamt)
+  let resultDate = new Date(timestamt_result)
+console.log(resultDate.getDate())
+}
+// getDateAgo(oneDate, 5)
+
+
+getDateAgo_2 = function(date, days) {
+  console.log(date.getDate() - days)
+}
+// getDateAgo_2(oneDate, 5)
+
+getSecondsToday = function() { 
+  let today = new Date()
+  let todayWithoutHours = new Date(today.getFullYear(), today.getMonth(), today.getDate())
+  console.log(Math.round((today - todayWithoutHours) / 1000))
+  console.log(todayWithoutHours)}
+
+// getSecondsToday()
+
+getSecondsToTomorrow = function() {
+  let today_2 = new Date()
+  let tomorrow = new Date(today_2.getFullYear(), today_2.getMonth(), today_2.getDate() + 1, )
+  console.log(Math.round((tomorrow - today_2) / 1000))
+}
+ 
+getSecondsToTomorrow()
