@@ -668,4 +668,23 @@ getSecondsToTomorrow = function() {
   console.log(Math.round((tomorrow - today_2) / 1000))
 }
  
-getSecondsToTomorrow()
+// getSecondsToTomorrow()
+
+formatDate = function(date) {
+  let timeNowStamp = new Date().getTime() 
+  timestampFromArg = date.getTime()
+  if ((timeNowStamp - timestampFromArg) < 1000) {
+    console.log("прямо сейчас")
+  }
+  else if ((timeNowStamp - timestampFromArg) < 60000) {
+    console.log(`${(timeNowStamp - timestampFromArg) / 1000}30 сек. назад`)
+  }
+  else if ((timeNowStamp - timestampFromArg) < (60000 * 60)) {
+    console.log(`${(timeNowStamp - timestampFromArg) / (1000 * 60)} мин. назад`)
+  }
+  
+}
+
+formatDate(new Date(new Date - 5 * 60 * 1000))
+
+
